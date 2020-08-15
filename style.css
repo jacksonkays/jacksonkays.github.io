@@ -435,7 +435,6 @@ input[type="submit"]:hover {
     .icon-container i{
         font-size: 4rem;
     }
-
 }
 @media screen and (max-width: 768px) {
     .menu-toggler{
@@ -454,21 +453,60 @@ input[type="submit"]:hover {
     }
     .about .container{
         flex-direction: column;
-        margin-top: 5rem;
+        margin-top: 20rem;
     }
     .profile-img {
-        width: 50%;
-        height: 50%;
         margin: 0 0 7rem 0;
     }
     .about-heading {
         line-height: 1em;
         margin-bottom: 5rem;
     }
+    .skills .container {
+        margin-top: 20rem;
+    }
+    .projects .container {
+        margin-top: 50rem;
+    }
 }
-@media screen and (max-width: 425px) {
-   .quick-links-list {
-       font-size: .5rem;
-       margin: .5rem;
-   }
+@media screen and (max-width: 583px) {
+    .skills .container {
+        margin-bottom: 25em;
+    }
+    .about-heading {
+        line-height: 1.5em;
+    }
+}
+@media screen and (max-width: 430px) {
+    .menu-toggler {
+        width: 4rem;
+        height: 3rem;
+    }
+    .quick-links-list a{
+        font-size: 1.5rem;
+    }
+    .about-heading {
+        line-height: 1.5em;
+    }
+    .skills .container {
+        margin-bottom: 50em;
+    }
+}
+@media screen and (max-width: 330px) {
+    .quick-links-list {
+        top: 2rem;
+        left: 2rem;
+    }
+    .menu-toggler {
+        top: 4rem;
+        right: 1rem;
+        width: 3rem;
+        height: 2rem;
+    }
+    .about .container {
+        margin-top: 30rem;
+    }
+    .skills .container {
+        margin-bottom: 60em;
+    }
 }
