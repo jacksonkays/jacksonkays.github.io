@@ -199,7 +199,7 @@ li {
     font-size: 20rem;
     font-family: 'Bungee Shade', cursive;
     line-height: 1em;
-    padding: 1rem;
+    padding-bottom: 5rem;
     user-select: none;
 }
 .landing-text h6{
