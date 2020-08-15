@@ -136,6 +136,7 @@ li {
     display: flex;
     list-style: none;
     color: whitesmoke;
+    align-items: center;
 }
 .quick-links-list i{
     transition: color 650ms;
