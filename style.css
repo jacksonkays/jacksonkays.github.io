@@ -94,7 +94,7 @@ header {
     width: 100%;
     height: 100vh;
     position: fixed;
-    top: -100vh;
+    top: -200vh;
     z-index: 50;
     background-color: #000428;
     border-bottom-right-radius: 100%;
@@ -198,6 +198,7 @@ li {
 .landing-text h1{
     font-size: 20rem;
     font-family: 'Bungee Shade', cursive;
+    line-height: 1em;
     padding: 1rem;
     user-select: none;
 }
@@ -218,20 +219,23 @@ li {
     font-size: 5rem;
     text-align: center;
     text-transform: uppercase;
+    line-height: 1.5em;
+    margin-bottom: 5rem;
 }
 .profile-img{
     flex: 1;
     margin-right: 5rem;
 }
 .about-details {
+    align-items: center;
     flex: 1;
-    height: 100%;
+    height: fit-content;
 }
 .about-details p{
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 .social-media{
-    margin-top: 4rem;
+    margin-top: 3rem;
     height: 6rem;
 }
 .social-media i{
@@ -390,9 +394,9 @@ input[type="submit"]:hover {
 /*End Animations*/
 
 /* Media Queries */
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 1024px) {
     .landing-text h1{
-        font-size: 15rem;
+        font-size: 11rem;
     }
     .landing-text h6{
         font-size: 1.7rem;
@@ -400,14 +404,17 @@ input[type="submit"]:hover {
     .nav-list{
         flex-direction: column;
     }
+    .quick-links-list li{
+        margin: 1rem;
+    }
     li{
-        margin: 2rem 0;
+        margin: .3rem 0;
     }
     .nav-link {
         font-size: 4.5rem;
     }
     .about-heading h1{
-        font-size: 8rem;
+        font-size: 7rem;
     }
     .section-heading h1{
         font-size: 3rem;
@@ -415,8 +422,11 @@ input[type="submit"]:hover {
     .about-details .nav-list{
         flex-direction: initial;
     }
+    .about-details p{
+        font-size: 1rem;
+    }
     .about-details li{
-        margin: 0.2rem;
+        margin: 1rem;
     }
     .icon-container{
       width: 7rem;
@@ -427,12 +437,13 @@ input[type="submit"]:hover {
     }
 
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .menu-toggler{
-        top: 2rem;
-        right: 2rem;
+        top: 5rem;
+        right: 5rem;
     }
     .landing-text {
+        line-height: 1em;
         font-size: 8rem;
     }
     .landing-text h6{
@@ -443,8 +454,21 @@ input[type="submit"]:hover {
     }
     .about .container{
         flex-direction: column;
+        margin-top: 5rem;
     }
     .profile-img {
+        width: 50%;
+        height: 50%;
         margin: 0 0 7rem 0;
     }
+    .about-heading {
+        line-height: 1em;
+        margin-bottom: 5rem;
+    }
+}
+@media screen and (max-width: 425px) {
+   .quick-links-list {
+       font-size: .5rem;
+       margin: .5rem;
+   }
 }
