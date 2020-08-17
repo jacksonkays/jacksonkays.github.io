@@ -281,6 +281,15 @@ li {
     letter-spacing: 2px;
     margin: 2rem -2px 2rem 0;
 }
+#skill_3 {
+    margin-top: 1.5rem;
+    font-size: .8rem;
+    line-height: 2rem;
+}
+ #skill_4 h1{
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
 .icon-container {
     width: 10rem;
     height: 10rem;
@@ -429,6 +438,9 @@ input[type="submit"]:hover {
     .about-details li{
         margin: 1rem;
     }
+    #skill_3 {
+        margin-top: 1.25rem;
+    }
     .icon-container{
       width: 7rem;
       height: 7rem;  
@@ -466,6 +478,9 @@ input[type="submit"]:hover {
     .skills .container {
         margin-top: 20rem;
     }
+    #skill_3 {
+        margin-top: 1.5rem;
+    }
     .projects .container {
         margin-top: 50rem;
     }
@@ -473,6 +488,9 @@ input[type="submit"]:hover {
 @media screen and (max-width: 583px) {
     .skills .container {
         margin-bottom: 25em;
+    }
+    #skill_3 {
+        margin-top: 0rem;
     }
     .about-heading {
         line-height: 1.5em;
