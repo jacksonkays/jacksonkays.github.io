@@ -256,6 +256,9 @@ li {
 .fa-linkedin:hover {
     color: #0e76a8;
 }
+.fa-github:hover {
+    color: #6d6c6c;
+}
 .fa-envelope:hover {
     color: #f3900e;
 }
@@ -498,14 +501,14 @@ input[type="submit"]:hover {
 }
 @media screen and (max-width: 430px) {
     .menu-toggler {
-        width: 4rem;
-        height: 3rem;
+        width: 3rem;
+        height: 2rem;
         top: 2rem;
-        right: 1rem;
+        right: .5rem;
     }
     .quick-links-list {
         top: 2rem;
-        left: 1rem;
+        left: .5rem;
     }
     .quick-links-list a{
         font-size: 1.5rem;
