@@ -1,6 +1,22 @@
 /*Start global*/
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@font-face {
+    font-family: Simplifica;
+    src: url(SIMPLIFICA\ Typeface.ttf);
+}
+@font-face {
+    font-family: PaulGrotesk-Bold;
+    src: url(PaulGrotesk-Bold-Trail.otf);
+}
+@font-face {
+    font-family: PaulGrotesk-Regular;
+    src: url(PaulGrotesk-Regular-Trail.otf);
+}
+@font-face {
+    font-family: PaulGrotesk-Thin;
+    src: url(PaulGrotesk-Thin-Trail.otf);
+}
 *{
  margin: 0;
  padding: 0;
@@ -9,20 +25,21 @@
 
 html{
     font-size: 10px;
-    font-family: 'Bungee', cursive;
-    color: whitesmoke;
+    font-family: 'PaulGrotesk-Regular', cursive;
+    color: darkslategrey;
 }
 
 body{
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, #000428, #004e92) no-repeat center fixed;
+    background: whitesmoke;
+    /*background: linear-gradient(180deg, #ffffff, #737374) no-repeat center fixed;*/
     background-size: cover;
 }
 
 a{
     text-decoration: none;
-    color: whitesmoke;
+    color: darkslategrey;
 }
 p {
     font-size: 1.8em;
@@ -44,14 +61,13 @@ img{
 }
 .section-heading{
     text-align: center;
-    color: whitesmoke;
+    color: darkslategray;
     margin-top: 10rem;
 }
 .section-heading h1{
     font-size: 3.5rem;
-    color: whitesmoke;
-    font-family: 'Bungee Shade', cursive;
-    text-transform: uppercase;
+    color: darkslategray;
+    font-family: 'PaulGrotesk-Bold', cursive;
     font-weight: 300;
     position: relative;
     margin-bottom: 1rem;
@@ -63,7 +79,7 @@ img{
     bottom: -.5rem;
     left: 50%;
     transform: translateX(-50%);
-    background-color: whitesmoke;
+    background-color: darkslategray;
     opacity: 1;
 
 }
@@ -96,7 +112,7 @@ header {
     position: fixed;
     top: -200vh;
     z-index: 50;
-    background-color: #000428;
+    background-color: darkslategray;
     border-bottom-right-radius: 100%;
     border-bottom-left-radius: 100%;
     transition: all 650ms cubic-bezier(1,0,0,1);
@@ -113,13 +129,14 @@ li {
     margin: 0 2rem;
 }
 .nav-link{
-    font-family: 'Bungee', cursive;
+    font-family: 'PaulGrotesk-Regular', cursive;
+    color: whitesmoke;
     font-size: 4rem;
     padding: .8rem;
 }
 .nav-link:hover,
 .nav-link:focus{
-    background: linear-gradient( to top, #f3900e, whitesmoke);
+    background: linear-gradient(180deg, #f9b16e, #f68080);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -135,7 +152,7 @@ li {
     font-size: 2rem;
     display: flex;
     list-style: none;
-    color: whitesmoke;
+    color: darkslategray;
     align-items: center;
 }
 .quick-links-list i{
@@ -144,8 +161,11 @@ li {
 .quick-links-list a{
     font-size: 2rem;
 }
-#resume-quick-link {
-    transition: color 650ms;
+#resume-quick-link:hover,
+#resume-quick-link:focus {
+    background: linear-gradient(270deg, #f9b16e, #f68080);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .menu-toggler {
     position: absolute;
@@ -164,7 +184,7 @@ li {
     transform: rotate(-45deg);
 }
 .bar{
-    background: linear-gradient(to right, #f3900e, whitesmoke);
+    background: linear-gradient(to right, #f9b16e, #f68080);
     width: 100%;
     height: 4px; 
     border-radius: .8rem;
@@ -187,25 +207,40 @@ li {
 .open .bar.end {
     transform: rotate(-450deg) translateX(-.8rem);
 }
-.landing-text{
+.landing-text {
+    display: flex;
     position: absolute;
+    align-items: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    text-align: center;
+    padding-left: 5rem;
     z-index: 1;
 }
+.landing-text-text{
+    text-align: left;
+}
+.landing-text-photo{
+    flex: 1;
+    margin-right: 5rem;
+}
 .landing-text h1{
-    font-size: 20rem;
-    font-family: 'Bungee Shade', cursive;
+    font-size: 14rem;
+    font-family: 'PaulGrotesk-Bold', cursive;
     line-height: 1em;
     padding-bottom: 5rem;
     user-select: none;
 }
-.landing-text h6{
-    font-size: 2rem;
-    font-weight: 200;
+.landing-text h2{
+    font-size: 10rem;
+    line-height: 1em;
+    font-family: 'PaulGrotesk-Regular', cursive;
+}
+.landing-text h3{
+    font-size: 6rem;
+    line-height: 1em;
+    font-family: 'PaulGrotesk-Regular', cursive;
 }
 /*End Header*/
 
@@ -214,14 +249,14 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin:auto;
 }
 .about-heading {
-    font-family: 'Bungee Shade', cursive;
+    font-family: 'PaulGrotesk-Bold', cursive;
     font-size: 5rem;
     text-align: center;
-    text-transform: uppercase;
     line-height: 1.5em;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
 }
 .profile-img{
     flex: 1;
@@ -233,7 +268,7 @@ li {
     height: fit-content;
 }
 .about-details p{
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 .social-media{
     margin-top: 3rem;
@@ -260,9 +295,54 @@ li {
     color: #6d6c6c;
 }
 .fa-envelope:hover {
-    color: #f3900e;
+    color: transparent;
+    background: linear-gradient(270deg, #f9b16e, #f68080);
+    background: -webkit-linear-gradient(270deg, #f9b16e, #f68080);
+    background-clip: text;
+    -webkit-background-clip: text;
 }
 /*End About*/
+
+/*Start Experience*/
+.experience{
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+}
+#experience-section-heading{
+    padding-bottom: 3rem;
+}
+.experience-descriptions p{
+    text-align: left;
+    font-size: 2rem;
+}
+.experience-descriptions li{
+    padding: .5rem;
+}
+.experience-company-heading{
+    justify-content: left;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+.experience-company-name{
+    text-align: left;
+    font-family: 'PaulGrotesk-Bold', cursive;
+}
+.experience-descriptions h3{
+    font-size: 3em;
+}
+.experience-descriptions h5{
+    font-size: 2em;
+}
+.experience img{
+    max-width: 20%;
+    max-height: 20%;
+}
+.experience li{
+    font-size: 2rem;
+}
+/*End Experience*/
 
 /*Start Skills*/
 .my-skills{
@@ -280,7 +360,6 @@ li {
     padding: 2rem;
 }
 .skill h1{
-    text-transform: uppercase;
     letter-spacing: 2px;
     margin: 2rem -2px 2rem 0;
 }
@@ -296,26 +375,41 @@ li {
 .icon-container {
     width: 10rem;
     height: 10rem;
-    border: 3px solid whitesmoke;
-    background: gray;
+    border: 3px solid darkslategray;
+    background: lightgray;
     margin-bottom: 2rem;
     display: flex;
     transform: rotate(45deg);
 }
 .icon-container i{
-    color: whitesmoke;
+    color: darkslategray;
     font-size: 5rem;
     margin: auto;
     transform: rotate(-45deg);
 }
 .icon-container:hover {
-    background: linear-gradient( -45deg, #f3900e, whitesmoke);
+    background: linear-gradient(180deg, #f9b16e, #f68080);
     width: 11rem;
     height: 11rem;
     animation: color;
     transition: ease-in 200ms;
 }
 /*End Skills*/
+
+/*Start Projects*/
+.projects p{
+    font-size: 2rem;
+    font-family: 'PaulGrotesk-Regular', cursive;
+}
+.projects h3{
+    font-size: 4rem;
+    font-family: 'PaulGrotesk-Bold', cursive;
+    margin-bottom: 1rem;
+}
+.project-description{
+    padding: 2rem;
+}
+/*End Projects*/
 
 /*Start Contact*/
 .contact{
@@ -340,16 +434,17 @@ textarea{
 }
 input[type="submit"]{
     width: initial;
-    background-color: grey;
-    color:whitesmoke;
+    font-family: 'PaulGrotesk-Bold', cursive;
+    background-color: lightgray;
+    color:darkslategray;
     padding: 1rem 2rem;
     border-radius: .4rem;
     cursor: pointer;
     transition: background-color 650ms;
 }
 input[type="submit"]:hover {
-    background-color: whitesmoke;
-    color: #000428;
+    background-color: darkslategray;
+    color: whitesmoke;
 }
 /*End Contact*/
 
@@ -357,7 +452,7 @@ input[type="submit"]:hover {
 .copyright{
     width: 100%;
     text-align: center;
-    background-color: #00315c;
+    background-color: darkslategray;
     padding: 2rem 0;
     position: relative;
 }
@@ -375,11 +470,12 @@ input[type="submit"]:hover {
 }
 
 .up i{
-    color: #000428;
+    color:darkslategray;
     font-size: 2rem;
     margin: auto;
 }
 .copyright p{
+    color: whitesmoke;
     font-size: 1.3rem;
 }
 /*End Footer*/
@@ -398,7 +494,7 @@ input[type="submit"]:hover {
 }
 @keyframes color{
     0%{
-        background: grey;
+        background: darkslategray;
     }
     100%{
          background: linear-gradient( -45deg, #f3900e, whitesmoke);
@@ -453,9 +549,17 @@ input[type="submit"]:hover {
     }
 }
 @media screen and (max-width: 768px) {
+
+    p{
+        font-size: 2.5rem;
+    }
     .menu-toggler{
         top: 5rem;
         right: 5rem;
+    }
+    .landing-text .container{
+        flex-direction: column;
+        margin-top: 10rem;
     }
     .landing-text {
         line-height: 1em;
@@ -469,10 +573,12 @@ input[type="submit"]:hover {
     }
     .about .container{
         flex-direction: column;
-        margin-top: 20rem;
+        margin-top: 10rem;
     }
     .profile-img {
         margin: 0 0 7rem 0;
+        width: 100%;
+        height: 100%;
     }
     .about-heading {
         line-height: 1em;
@@ -526,5 +632,8 @@ input[type="submit"]:hover {
     }
     .skills .container {
         margin-bottom: 60em;
+    }
+    .landing-text{
+        font-size: 60%;
     }
 }
