@@ -244,6 +244,13 @@ li {
     grid-area: landingPhoto;
     place-self: center;
 }
+.landing-text-text{
+    text-align: left;
+}
+.landing-text-photo{
+    flex: 1;
+    margin-right: 5rem;
+}
 .landing-text h1{
     font-size: 14rem;
     font-family: 'PaulGrotesk-Bold', cursive;
