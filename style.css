@@ -33,8 +33,20 @@ body{
     width: 100%;
     height: 100%;
     background: whitesmoke;
-    /*background: linear-gradient(180deg, #ffffff, #737374) no-repeat center fixed;*/
     background-size: cover;
+    /*display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    row-gap: 3em;
+    grid-template-areas: 'myHeader myHeader myHeader' 
+    'landingText landingText landingPhoto' 
+    'aboutMePhoto aboutMeText aboutMeText' 
+    'experience experience experience' 
+    'skills skills skills' 
+    'projects projects projects' 
+    'contact contact contact' 
+    'footer footer footer';
+    place-items: center;*/
 }
 
 a{
@@ -105,6 +117,7 @@ img{
 header {
     width: 100%;
     height: 100%;
+    /*grid-area: myHeader;*/
 }
 .top-nav {
     width: 100%;
@@ -208,7 +221,6 @@ li {
     transform: rotate(-450deg) translateX(-.8rem);
 }
 .landing-text {
-    display: flex;
     position: absolute;
     align-items: center;
     top: 50%;
@@ -217,13 +229,20 @@ li {
     width: 100%;
     padding-left: 5rem;
     z-index: 1;
+
+    display: grid; 
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: 'landingText landingText landingText landingPhoto landingPhoto';
 }
 .landing-text-text{
     text-align: left;
+    grid-area: landingText;
+    place-self: center;
 }
 .landing-text-photo{
-    flex: 1;
     margin-right: 5rem;
+    grid-area: landingPhoto;
+    place-self: center;
 }
 .landing-text h1{
     font-size: 14rem;
@@ -246,10 +265,12 @@ li {
 
 /*Start About*/
 .about .container{
-    display: flex;
     align-items: center;
     justify-content: center;
     margin:auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: 'aboutPhoto aboutPhoto aboutText aboutText aboutText';
 }
 .about-heading {
     font-family: 'PaulGrotesk-Bold', cursive;
@@ -259,13 +280,15 @@ li {
     margin-bottom: 2rem;
 }
 .profile-img{
-    flex: 1;
     margin-right: 5rem;
+    grid-area: aboutPhoto;
+    place-self: center;
 }
 .about-details {
     align-items: center;
-    flex: 1;
     height: fit-content;
+    grid-area: aboutText;
+    place-self: center;
 }
 .about-details p{
     font-size: 2rem;
@@ -308,6 +331,7 @@ li {
     margin-top: 10rem;
     display: flex;
     justify-content: center;
+    grid-area: experience;
 }
 #experience-section-heading{
     padding-bottom: 3rem;
@@ -345,19 +369,46 @@ li {
 /*End Experience*/
 
 /*Start Skills*/
+.skills{
+    height: fit-content;
+}
 .my-skills{
-    margin-top: 10rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 2.5rem;
+    grid-template-areas: 'skill1 skill2 skill3 skill4';
+    height: auto;
     text-align: center;
+    place-items: center;
 }
 .skill{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    /*padding: 2rem;*/
+}
+#skill_1{
+    grid-template-columns: 1 / 2;
+    place-self: center;
+    grid-area: 'skill1';
+}
+#skill_2{
+    grid-template-columns: 2 / 3;
+    place-self: center;
+    grid-area: 'skill2';
+}
+#skill_3{
+    grid-template-columns: 3 / 4;
+    place-self: center;
+    grid-area: 'skill3';
+}
+#skill_4{
+    grid-template-columns: 4 / 5;
+    place-self: center;
+    grid-area: 'skill4';
 }
 .skill h1{
     letter-spacing: 2px;
@@ -368,7 +419,7 @@ li {
     font-size: .8rem;
     line-height: 2rem;
 }
- #skill_4 h1{
+#skill_4 h1{
     font-size: 1.5rem;
     line-height: 2rem;
 }
@@ -397,6 +448,9 @@ li {
 /*End Skills*/
 
 /*Start Projects*/
+.projects {
+    grid-area: projects;
+}
 .projects p{
     font-size: 2rem;
     font-family: 'PaulGrotesk-Regular', cursive;
@@ -414,6 +468,8 @@ li {
 /*Start Contact*/
 .contact{
     background-color: transparent;
+    grid-area: contact;
+    place-self: center stretch;
 }
 form{
     width: 70%;
@@ -449,12 +505,14 @@ input[type="submit"]:hover {
 /*End Contact*/
 
 /*Start Footer*/
+
 .copyright{
     width: 100%;
     text-align: center;
     background-color: darkslategray;
     padding: 2rem 0;
     position: relative;
+    grid-area: footer;
 }
 .up{
     position: absolute;
@@ -636,4 +694,4 @@ input[type="submit"]:hover {
     .landing-text{
         font-size: 60%;
     }
-}
+} 
