@@ -119,7 +119,7 @@ header {
     padding-top: 5vh;
 }
 .icon-links li{
-    display: inline;
+    display: inline-block;
     text-decoration: none;
     align-items: center;
     height: 4rem;
