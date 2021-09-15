@@ -1,10 +1,4 @@
 /*Start global*/
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
-@font-face {
-    font-family: Simplifica;
-    src: url(SIMPLIFICA\ Typeface.ttf);
-}
 @font-face {
     font-family: PaulGrotesk-Bold;
     src: url(PaulGrotesk-Bold-Trail.otf);
@@ -113,11 +107,45 @@ img{
 }
 /*End Reusable*/
 
-/*Start Header*/
+/*Start Link Bar*/
 header {
     width: 100%;
     height: 100%;
-    /*grid-area: myHeader;*/
+}
+.quick-links{
+    display: inline-block;
+    width: 100%;
+    height: 10rem;
+    padding-top: 5vh;
+}
+.icon-links li{
+    display: inline;
+    text-decoration: none;
+    align-items: center;
+    height: 4rem;
+    font-size: 2rem;
+    color: darkslategray;
+}
+.icon-links i{
+    transition: color 650ms;
+}
+.icon-links a{
+    font-size: 2rem;
+}
+#twitter-icon {
+    grid-area: 'twitter';
+}
+#instagram-icon {
+    grid-area: 'instagram';
+}
+#linkedin-icon {
+    grid-area: 'linkedin';
+}
+#github-icon {
+    grid-area: 'github';
+}
+#mail-icon {
+    grid-area: 'mail';
 }
 .top-nav {
     width: 100%;
@@ -157,22 +185,8 @@ li {
     top: 0;
     border-radius: initial;
 }
-.quick-links-list {
-    position: absolute;
-    top: 5rem;
-    left: 5rem;
-    height: 4rem;
-    font-size: 2rem;
-    display: flex;
-    list-style: none;
-    color: darkslategray;
-    align-items: center;
-}
-.quick-links-list i{
-    transition: color 650ms;
-}
-.quick-links-list a{
-    font-size: 2rem;
+#resume-quick-link {
+    grid-area: 'resume';
 }
 #resume-quick-link:hover,
 #resume-quick-link:focus {
@@ -181,11 +195,12 @@ li {
     -webkit-text-fill-color: transparent;
 }
 .menu-toggler {
+    grid-area: 'menuToggler';
     position: absolute;
-    top: 5rem;
-    right: 5rem;
-    width: 5rem;
-    height: 4rem;
+    top: 5vh;
+    right: 5vh;
+    width: 7.5vh;
+    height: 6vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -220,6 +235,13 @@ li {
 .open .bar.end {
     transform: rotate(-450deg) translateX(-.8rem);
 }
+@media screen and (max-width: 600px) {
+    .quick-links-list{
+        display: none;
+    }
+}
+/* End Link Bar */
+/*Start landing text */
 .landing-text {
     position: absolute;
     align-items: center;
@@ -233,6 +255,7 @@ li {
     display: grid; 
     grid-template-columns: repeat(5, 1fr);
     grid-template-areas: 'landingText landingText landingText landingPhoto landingPhoto';
+    place-items: center;
 }
 .landing-text-text{
     text-align: left;
@@ -252,23 +275,23 @@ li {
     margin-right: 5rem;
 }
 .landing-text h1{
-    font-size: 14rem;
+    font-size: 18vh;
     font-family: 'PaulGrotesk-Bold', cursive;
     line-height: 1em;
     padding-bottom: 5rem;
     user-select: none;
 }
 .landing-text h2{
-    font-size: 10rem;
+    font-size: 12vh;
     line-height: 1em;
     font-family: 'PaulGrotesk-Regular', cursive;
 }
 .landing-text h3{
-    font-size: 6rem;
+    font-size: 8vh;
     line-height: 1em;
     font-family: 'PaulGrotesk-Regular', cursive;
 }
-/*End Header*/
+/*End Landing Text*/
 
 /*Start About*/
 .about .container{
@@ -281,7 +304,7 @@ li {
 }
 .about-heading {
     font-family: 'PaulGrotesk-Bold', cursive;
-    font-size: 5rem;
+    font-size: 8vh;
     text-align: center;
     line-height: 1.5em;
     margin-bottom: 2rem;
@@ -390,45 +413,37 @@ li {
     text-align: center;
     place-items: center;
 }
-.skill{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /*padding: 2rem;*/
-}
 #skill_1{
-    grid-template-columns: 1 / 2;
+    grid-template-columns: 1;
     place-self: center;
     grid-area: 'skill1';
+    height: fit-content;
+    width: fit-content;
 }
 #skill_2{
-    grid-template-columns: 2 / 3;
+    grid-template-columns: 2;
     place-self: center;
     grid-area: 'skill2';
+    height: fit-content;
+    width: fit-content;
 }
 #skill_3{
-    grid-template-columns: 3 / 4;
+    grid-template-columns: 3;
     place-self: center;
     grid-area: 'skill3';
+    height: fit-content;
+    width: fit-content;
 }
 #skill_4{
-    grid-template-columns: 4 / 5;
+    grid-template-columns: 4;
     place-self: center;
     grid-area: 'skill4';
+    height: fit-content;
+    width: fit-content;
 }
 .skill h1{
     letter-spacing: 2px;
     margin: 2rem -2px 2rem 0;
-}
-#skill_3 {
-    margin-top: 1.5rem;
-    font-size: .8rem;
-    line-height: 2rem;
-}
-#skill_4 h1{
-    font-size: 1.5rem;
-    line-height: 2rem;
 }
 .icon-container {
     width: 10rem;
@@ -575,18 +590,6 @@ input[type="submit"]:hover {
     .landing-text h6{
         font-size: 1.7rem;
     }
-    .nav-list{
-        flex-direction: column;
-    }
-    .quick-links-list li{
-        margin: 1rem;
-    }
-    li{
-        margin: .3rem 0;
-    }
-    .nav-link {
-        font-size: 4.5rem;
-    }
     .about-heading h1{
         font-size: 7rem;
     }
@@ -618,87 +621,99 @@ input[type="submit"]:hover {
     p{
         font-size: 2.5rem;
     }
-    .menu-toggler{
-        top: 5rem;
-        right: 5rem;
+    .landing-text h1{
+        font-size: 12vh;
+        padding-bottom: 2rem;
     }
-    .landing-text .container{
-        flex-direction: column;
-        margin-top: 10rem;
+    .landing-text h2{
+        font-size: 8vh;
     }
-    .landing-text {
-        line-height: 1em;
-        font-size: 8rem;
+    .landing-text h3{
+        font-size: 6vh;
     }
-    .landing-text h6{
-        font-size: 1.4rem;
+    .landing-text-photo{
+        margin-right: 2rem;
     }
     .nav-link {
-        font-size: 3.5rem;
+        font-size: 2.5rem;
+        padding: .5rem;
     }
-    .about .container{
-        flex-direction: column;
-        margin-top: 10rem;
-    }
-    .profile-img {
-        margin: 0 0 7rem 0;
-        width: 100%;
-        height: 100%;
-    }
-    .about-heading {
-        line-height: 1em;
-        margin-bottom: 5rem;
-    }
-    .skills .container {
-        margin-top: 20rem;
-    }
-    #skill_3 {
-        margin-top: 1.5rem;
-    }
-    .projects .container {
-        margin-top: 50rem;
+    .projects{
+        padding-bottom: 5em;
     }
 }
 @media screen and (max-width: 583px) {
-    .skills .container {
-        margin-bottom: 25em;
+    .icon-links i{
+        font-size: 2vh;
+        height: 2vh;
+        margin-right: -5vh;
     }
-    #skill_3 {
-        margin-top: 0rem;
+    .menu-toggler{
+        top: 2vh;
     }
-    .about-heading {
-        line-height: 1.5em;
-    }
-}
-@media screen and (max-width: 430px) {
-    .menu-toggler {
-        width: 3rem;
-        height: 2rem;
-        top: 2rem;
-        right: .5rem;
-    }
-    .quick-links-list {
-        top: 2rem;
-        left: .5rem;
-    }
-    .quick-links-list a{
-        font-size: 1.5rem;
-    }
-    .about-heading {
-        line-height: 1.5em;
-    }
-    .skills .container {
-        margin-bottom: 50em;
-    }
-}
-@media screen and (max-width: 330px) {
-    .about .container {
-        margin-top: 30rem;
-    }
-    .skills .container {
-        margin-bottom: 60em;
+    .landing-text-photo{
+        display: none;
     }
     .landing-text{
-        font-size: 60%;
+        grid-template-areas: 'landingText landingText landingText landingText landingText';
+        padding: auto;
+        margin: auto;
     }
-} 
+    .landing-text h1{
+        font-size: 10vh;
+        padding-bottom: 1rem;
+    }
+    .landing-text h2{
+        font-size: 7vh;
+    }
+    .landing-text h3{
+        font-size: 5vh;
+    }
+    .about .container{
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+    }
+    .profile-img{
+        flex: 1;
+    }
+    .about-details{
+        flex: 2;
+    }
+    .about-details p{
+        font-size: 2.5vh;
+    }
+}
+@media screen and (max-width: 450px) {
+    #skill_3 {
+        margin-top: 3rem;
+    }
+    #skill_4 {
+        margin-left: -2rem;
+        font-size: .8rem;
+    }
+    .nav-link{
+        font-size: 1rem;
+        padding: 0rem;
+        margin: 0rem;
+    }
+}
+@media screen and (min-width: 300px) {
+    .projects{
+        display: flex;
+        padding: auto;
+        margin: auto;
+    }
+    .my-skills{
+        grid-gap: 1.5rem;
+    }
+    .icon-container i{
+        font-size: 4vh;
+    }
+    .icon-container{
+        height: 8vh;
+        width: 8vh;
+        margin: auto;
+        padding: auto;
+    }
+}
