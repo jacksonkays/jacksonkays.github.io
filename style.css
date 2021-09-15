@@ -113,13 +113,13 @@ header {
     height: 100%;
 }
 .quick-links{
-    display: inline-block;
+    display: inline;
     width: 100%;
     height: 10rem;
     padding-top: 5vh;
 }
 .icon-links li{
-    display: inline-block;
+    display: inline;
     list-style: none;
     text-decoration: none;
     align-items: center;
